@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Surveillance Intelligente des Plantes</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+   @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+   }
+   .fade-in {
+      animation: fadeIn 2s ease-in-out;
+   }
+   .zoomable {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 5px;
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+   }
+   .zoomable:hover {
+      transform: scale(1.05);
+   }
+   .zoom-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      animation: fadeIn 0.5s ease-in-out;
+   }
+   .zoom-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+   }
+   @keyframes slideIn {
+      from { transform: translateX(-100%); }
+      to { transform: translateX(0); }
+   }
+   .slide-in {
+      animation: slideIn 1s ease-in-out;
+   }
+  </style>
+ </head>
+ <body class="bg-gradient-to-r from-green-100 to-blue-100 text-gray-800">
+  <header class="bg-green-700 text-white py-4 shadow-lg">
+   <h1 class="text-4xl font-bold text-center fade-in">Surveillance Intelligente des Plantes</h1>
+  </header>
+  <nav class="bg-gray-900 text-white shadow-md">
+   <div class="container mx-auto flex justify-center space-x-4 py-3">
+    <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#overview"><i class="fas fa-info-circle"></i> Aperçu</a>
+    <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#components"><i class="fas fa-cogs"></i> Composants</a>
+    <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#firebase"><i class="fas fa-database"></i> Firebase</a>
+    <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#mobile-app"><i class="fas fa-mobile-alt"></i> Application Mobile</a>
+    <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#team"><i class="fas fa-users"></i> Équipe</a>
+    <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#advantages"><i class="fas fa-info-circle"></i> Avantages</a>
+    <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#thanks"><i class="fas fa-heart"></i> Remerciements</a>
+    <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#github"><i class="fab fa-github"></i> Dépôt GitHub</a>
+   </div>
+  </nav>
+  <div class="container mx-auto p-4">
+   <section class="bg-white rounded-lg shadow-lg p-4 mb-4 fade-in" id="overview">
+    <img alt="Aperçu du système de surveillance des plantes avec capteurs et interface utilisateur" class="zoomable" height="400" src="images/2.jpg" width="600"/>
+    <h3 class="text-2xl font-bold mt-4 text-green-700">
+     Aperçu
+    </h3>
+    <p class="mt-2 text-gray-700">
+     Le système de surveillance intelligente des plantes suit l'humidité, la température et les niveaux d'humidité du sol.
+    </p>
+    <p class="mt-2 text-gray-700">
+     Ce projet utilise des capteurs avancés pour collecter des données en temps réel sur les conditions environnementales des plantes. Les données sont ensuite envoyées à une plateforme cloud pour une analyse et un suivi continus.
+    </p>
+    <p class="mt-2 text-gray-700">
+     L'objectif principal est d'optimiser l'irrigation et de garantir que les plantes reçoivent la quantité d'eau nécessaire, tout en évitant le gaspillage. Le système peut également détecter des anomalies telles que des niveaux d'humidité trop bas ou trop élevés et envoyer des alertes aux utilisateurs.
+    </p>
+    <p class="mt-2 text-gray-700">
+     En plus de la surveillance de l'humidité et de la température, le système peut être étendu pour inclure d'autres paramètres tels que la luminosité et la qualité de l'air, offrant ainsi une solution complète pour la gestion des plantes.
+    </p>
+   </section>
+   <!-- Composants Section -->
+   <section class="bg-white rounded-lg shadow-lg p-4 mb-4 fade-in" id="components">
+      <img alt="Composants du système de surveillance des plantes incluant ESP32, capteurs et pompe à eau" class="zoomable" height="400" src="images/3.jpg"  width="600"/>
+      <h3 class="text-2xl font-bold mt-4 text-green-700">
+       Composants
+      </h3>
+      <ul class="list-disc list-inside mt-2 text-gray-700">
+       <li>
+       <strong> ESP32 :</strong> Microcontrôleur principal.
+       </li>
+       <li>
+      <strong>  Capteur d'humidité et de température :</strong> Mesure l'humidité du sol et la température ambiante pour assurer des conditions optimales pour les plantes.
+       </li>
+       <li>
+       <strong> Capteur PIR :</strong> Détection de mouvement.
+       </li>
+       <li>
+       <strong> Module relais et pompe à eau :</strong> Contrôle l'irrigation automatique en fonction des données des capteurs.
+       </li>
+       <li>
+       <strong> Batterie :</strong> Alimentation.
+       </li>
+       <li>
+      <strong>  Afficheur LCD :</strong> Affiche les données en temps réel pour une visualisation rapide et facile.
+       </li>
+      </ul>
+     </section>
+     <section class="bg-white rounded-lg shadow-lg p-4 mb-4 fade-in" id="firebase">
+      <img alt="Intégration de Firebase pour le stockage des données en temps réel" class="zoomable" height="400" src="images\6.png"  width="600"/>
+      <h3 class="text-2xl font-bold mt-4 text-green-700">
+       Intégration Firebase
+      </h3>
+      <p class="mt-2 text-gray-700">
+       Les données sont stockées dans Firebase pour un accès en temps réel.
+      </p>
+      <p class="mt-2 text-gray-700">
+       Firebase offre une solution de base de données en temps réel qui permet de synchroniser les données entre les appareils et le cloud. Cela signifie que les utilisateurs peuvent accéder aux données de leurs plantes à tout moment et de n'importe où, en utilisant simplement une connexion Internet.
+      </p>
+      <p class="mt-2 text-gray-700">
+       En utilisant Firebase, nous pouvons également mettre en place des règles de sécurité pour protéger les données des utilisateurs et garantir que seules les personnes autorisées peuvent accéder aux informations sensibles. De plus, Firebase permet de gérer facilement les notifications en temps réel, ce qui est essentiel pour alerter les utilisateurs en cas de conditions critiques.
+      </p>
+      <p class="mt-2 text-gray-700">
+       L'intégration avec Firebase simplifie également le développement de l'application mobile, car elle fournit des SDK pour différentes plateformes, facilitant ainsi la gestion des données et des utilisateurs.
+      </p>
+     </section>
+   <!-- Mobile App Section -->
+   <section class="bg-white rounded-lg shadow-lg p-4 mb-4 fade-in" id="mobile-app">
+      <img alt="Interface mobile de l'application de surveillance des plantes pour les alertes des valeurs de capteurs" class="zoomable" height="400" src="images/7.jpg"  width="600"/>
+      <h3 class="text-2xl font-bold mt-4 text-green-700">
+       Application Mobile
+      </h3>
+      <p class="mt-2 text-gray-700">
+       Interface intuitive pour consulter les données et contrôler la pompe.
+      </p>
+      <p class="mt-2 text-gray-700">
+       L'application mobile permet aux utilisateurs de surveiller les conditions de leurs plantes en temps réel, de recevoir des alertes et de prendre des mesures immédiates si nécessaire.
+      </p>
+      <p class="mt-2 text-gray-700">
+       Elle offre également des graphiques et des rapports détaillés pour aider les utilisateurs à comprendre les tendances et à optimiser les soins apportés à leurs plantes.
+      </p>
+     </section>
+  
+</section>
+<section class="bg-white rounded-lg shadow-lg p-4 mb-4 fade-in" id="thanks">
+ <h3 class="text-2xl font-bold mt-4 text-green-700">
+  Remerciements
+ </h3>
+ <div class="slide-in mt-4 p-4 bg-green-100 rounded-lg shadow-md">
+  <p class="text-gray-700">
+   Nous tenons à exprimer notre profonde gratitude à notre enseignant pour son soutien et ses conseils tout au long de ce projet. Votre expertise et votre dévouement ont été essentiels à notre réussite.
+  </p>
+  <p class="mt-2 text-gray-700">
+   Nous remercions également nos amis pour leur encouragement et leur aide précieuse. Votre soutien a été une source de motivation constante.
+  </p>
+  <p class="mt-2 text-gray-700">
+   Merci à tous pour votre contribution à la réalisation de ce projet.
+  </p>
+ </div>
+</section>
+<!-- GitHub Section -->
+<section class="bg-white rounded-lg shadow-lg p-4 mb-4 fade-in" id="github">
+   <h3 class="text-2xl font-bold mt-4 text-green-700">Dépôt GitHub</h3>
+   <p class="mt-2 text-gray-700">Retrouvez tous les fichiers et le code source du projet sur notre dépôt GitHub :</p>
+   <div class="mt-4">
+    <a class="text-white bg-green-700 px-4 py-2 rounded shadow hover:bg-green-600 transition duration-300" 
+       href="https://github.com/fares97203/smart-plant" 
+       target="_blank">
+     <i class="fab fa-github"></i> Voir le projet sur GitHub
+    </a>
+   </div>
+  </section>
+</section>
+   <!-- Contact Section -->
+   <section class="bg-white rounded-lg shadow-lg p-4 mb-4 fade-in" id="contact">
+    <h3 class="text-2xl font-bold mt-4 text-green-700">Contact</h3>
+    <p class="mt-2 text-gray-700">Pour toute question, contactez-nous :</p>
+    <div class="mt-4">
+     <div class="flex items-center space-x-4">
+      <i class="fas fa-envelope text-green-700 text-2xl"></i>
+      <div>
+       <h4 class="text-xl font-semibold">Email</h4>
+       <p class="text-gray-600"><a class="text-green-600" href="mailto:aymenmansouri8171@gmail.com">aymenmansouri8171@gmail.com</a></p>
+      </div>
+     </div>
+    </div>
+    <div class="mt-4">
+        <div class="flex items-center space-x-4">
+         <i class="fas fa-envelope text-green-700 text-2xl">
+         </i>
+         <div>
+          <h4 class="text-xl font-semibold">
+           Email
+          </h4>
+          <p class="text-gray-600">
+           <a class="text-green-600" href="dhifalllah17.aysser@gmail.com">
+            dhifalllah17.aysser@gmail.com
+           </a>
+          </p>
+         </div>
+        </div>
+        <div class="mt-4">
+            <div class="flex items-center space-x-4">
+             <i class="fas fa-envelope text-green-700 text-2xl">
+             </i>
+             <div>
+              <h4 class="text-xl font-semibold">
+               Email
+              </h4>
+              <p class="text-gray-600">
+               <a class="text-green-600" href="fares.hamza97203@gmail.com">
+                fares.hamza97203@gmail.com
+               </a>
+              </p>
+             </div>
+            </div>
+            <div class="mt-4">
+               <div class="flex items-center space-x-4">
+                <i class="fas fa-envelope text-green-700 text-2xl">
+                </i>
+                <div>
+                 <h4 class="text-xl font-semibold">
+                  Email
+                 </h4>
+                 <p class="text-gray-600">
+                  <a class="text-green-600" href="oumaimamaksoudi@gmail.com">
+                     oumaimamaksoudi@gmail.com
+                  </a>
+                 </p>
+                </div>
+               </div>
+               <div class="mt-4">
+                  <div class="flex items-center space-x-4">
+                   <i class="fas fa-envelope text-green-700 text-2xl">
+                   </i>
+                   <div>
+                    <h4 class="text-xl font-semibold">
+                     Email
+                    </h4>
+                    <p class="text-gray-600">
+                     <a class="text-green-600" href="rhoumaayoub12@gmail.com">
+                        rhoumaayoub12@gmail.com
+                     </a>
+                    </p>
+                   </div>
+                  </div>
+                  <div class="mt-4">
+                     <div class="flex items-center space-x-4">
+                      <i class="fas fa-envelope text-green-700 text-2xl">
+                      </i>
+                      <div>
+                       <h4 class="text-xl font-semibold">
+                        Email
+                       </h4>
+                       <p class="text-gray-600">
+                        <a class="text-green-600" href="rahalibasselbelhssan@gmail.com">
+                           rahalibasselbelhssan@gmail.com
+                        </a>
+                       </p>
+                      </div>
+                     </div>
+   
+   </section>
+  </div>
+  <footer class="bg-gray-900 text-white text-center py-4">
+   <p>© 2024 Surveillance Intelligente des Plantes. Tous droits réservés.</p>
+  </footer>
+  <script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.zoomable');
+    images.forEach(img => {
+     img.addEventListener('click', () => {
+      const overlay = document.createElement('div');
+      overlay.classList.add('zoom-overlay');
+      overlay.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+      overlay.addEventListener('click', () => overlay.remove());
+      document.body.appendChild(overlay);
+     });
+    });
+   });
+  </script>
+ </body>
+</html>

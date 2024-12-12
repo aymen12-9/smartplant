@@ -11,22 +11,22 @@
    @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
-   }
-   .fade-in {
+    }
+    .fade-in {
       animation: fadeIn 2s ease-in-out;
-   }
-   .zoomable {
+    }
+    .zoomable {
       width: 100%;
       height: 500px;
       object-fit: cover;
       border-radius: 5px;
       transition: transform 0.3s ease-in-out;
       cursor: pointer;
-   }
-   .zoomable:hover {
+    }
+    .zoomable:hover {
       transform: scale(1.05);
-   }
-   .zoom-overlay {
+    }
+    .zoom-overlay {
       position: fixed;
       top: 0;
       left: 0;
@@ -38,19 +38,19 @@
       justify-content: center;
       z-index: 1000;
       animation: fadeIn 0.5s ease-in-out;
-   }
-   .zoom-overlay img {
-      max-width: 90%;
-      max-height: 90%;
+    }
+    .zoom-overlay img {
+      max-width: 80%;
+      max-height: 80%;
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-   }
-   @keyframes slideIn {
+    }
+    @keyframes slideIn {
       from { transform: translateX(-100%); }
       to { transform: translateX(0); }
-   }
-   .slide-in {
+    }
+    .slide-in {
       animation: slideIn 1s ease-in-out;
-   }
+    } 
   </style>
  </head>
  <body class="bg-gradient-to-r from-green-100 to-blue-100 text-gray-800">
@@ -63,12 +63,13 @@
     <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#components"><i class="fas fa-cogs"></i> Composants</a>
     <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#firebase"><i class="fas fa-database"></i> Firebase</a>
     <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#mobile-app"><i class="fas fa-mobile-alt"></i> Application Mobile</a>
+    <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#video"><i class="fas fa-video"></i> Vidéo</a>
     <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#team"><i class="fas fa-users"></i> Équipe</a>
     <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#advantages"><i class="fas fa-info-circle"></i> Avantages</a>
-    <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#thanks"><i class="fas fa-heart"></i> Remerciements</a>
+   <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#github"><i class="fab fa-github"></i> Dépôt GitHub</a>
+   <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#thanks"><i class="fas fa-heart"></i> Remerciements</a>
     <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-    <a class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300" href="#github"><i class="fab fa-github"></i> Dépôt GitHub</a>
-   </div>
+</div>
   </nav>
   <div class="container mx-auto p-4">
    <section class="bg-white rounded-lg shadow-lg p-4 mb-4 fade-in" id="overview">
@@ -136,7 +137,7 @@
      </section>
    <!-- Mobile App Section -->
    <section class="bg-white rounded-lg shadow-lg p-4 mb-4 fade-in" id="mobile-app">
-      <img alt="Interface mobile de l'application de surveillance des plantes pour les alertes des valeurs de capteurs" class="zoomable" height="400" src="images/7.jpg"  width="600"/>
+      <img alt="Interface mobile de l'application de surveillance des plantes pour les alertes des valeurs de capteurs" class="zoomable" height="400" src="images/11.jpg"  width="600"/>
       <h3 class="text-2xl font-bold mt-4 text-green-700">
        Application Mobile
       </h3>
@@ -150,8 +151,141 @@
        Elle offre également des graphiques et des rapports détaillés pour aider les utilisateurs à comprendre les tendances et à optimiser les soins apportés à leurs plantes.
       </p>
      </section>
+   </section>
+   <!--video section-->
+   <section class="bg-white rounded-lg shadow-lg p-4 mb-4 fade-in" id="video">
+    <h3 class="text-2xl font-bold mt-4 text-green-700">
+      Vidéo du Projet:
+    </h3>
+    <p class="mt-2 text-gray-700">
+     <strong> Découvrez une présentation vidéo détaillée de notre projet de surveillance intelligente des plantes.</strong>
+    </p>
+    <br>
+    <video class="mt-4 w-full rounded shadow-lg" controls="" style="height: 400px; max: width 500px;">
+      <source src="videos/video.mp4" type="video/mp4" />
+      Votre navigateur ne supporte pas la lecture de vidéos. Veuillez utiliser un navigateur moderne.
+    </video>
+  </section>
   
+   <section class="bg-white rounded-lg shadow-lg p-4 mb-4 fade-in" id="team">
+    <h3 class="text-2xl font-bold mt-4 text-green-700">
+     Équipe :
+    </h3>
+    <br>
+    <br>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="flex items-center space-x-4">
+      <i class="fas fa-user text-green-700 text-2xl">
+      </i>
+      <div>
+       <h4 class="text-xl font-semibold">
+        Aymen
+       </h4>
+       <p class="text-gray-600">
+        Développeur Firebase et site web
+       </p>
+      </div>
+     </div>
+     <div class="flex items-center space-x-4">
+      <i class="fas fa-mobile-alt text-green-700 text-2xl">
+      </i>
+      <div>
+       <h4 class="text-xl font-semibold">
+        Fares
+       </h4>
+       <p class="text-gray-600">
+        Développeur application mobile
+       </p>
+      </div>
+     </div>
+     <div class="flex items-center space-x-4">
+      <i class="fas fa-chalkboard-teacher text-green-700 text-2xl">
+      </i>
+      <div>
+       <h4 class="text-xl font-semibold">
+        Bessel
+       </h4>
+       <p class="text-gray-600">
+        Présentation PowerPoint
+       </p>
+      </div>
+     </div>
+     <div class="flex items-center space-x-4">
+      <i class="fas fa-microchip text-green-700 text-2xl">
+      </i>
+      <div>
+       <h4 class="text-xl font-semibold">
+        Aysser
+       </h4>
+       <p class="text-gray-600">
+        Développeur code embarqué Arduino, inclut fonction JSON pour envoyer à Firebase
+       </p>
+      </div>
+     </div>
+     <div class="flex items-center space-x-4">
+      <i class="fas fa-file-alt text-green-700 text-2xl">
+      </i>
+      <div>
+       <h4 class="text-xl font-semibold">
+        Ayoub
+       </h4>
+       <p class="text-gray-600">
+        Rédaction du rapport du projet
+       </p>
+      </div>
+     </div>
+     <div class="flex items-center space-x-4">
+      <i class="fas fa-tools text-green-700 text-2xl">
+      </i>
+      <div>
+       <h4 class="text-xl font-semibold">
+        Oumaima
+       </h4>
+       <p class="text-gray-600">
+        Partie câblage
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="bg-white rounded-lg shadow-lg p-4 mb-4 fade-in" id="advantages">
+      <h3 class="text-2xl font-bold mt-4 text-green-700">
+       Avantages :
+      </h3>
+      <p class="mt-2 text-gray-700">
+       Le projet de surveillance intelligente des plantes utilise des technologies avancées pour assurer une gestion optimale de l'irrigation et de la santé des plantes. Voici quelques fonctionnalités supplémentaires :
+      </p>
+      <ul class="list-disc list-inside mt-2 text-gray-700">
+       <li>
+     <strong>Alertes en temps réel :</strong>    Recevez des notifications instantanées sur votre mobile en cas de niveaux d'humidité critiques.
+       </li>
+       <li>
+        <strong>Historique des données :</strong> Consultez l'historique des données de température et d'humidité pour analyser les tendances.
+       </li>
+       <li>
+        <strong>Contrôle à distance :</strong> Activez ou désactivez la pompe à eau à distance via l'application mobile.
+       </li>
+       <li>
+        <strong>Économie d'eau :</strong> Optimisation de l'utilisation de l'eau en fonction des besoins réels des plantes.
+       </li>
+       <li>
+        <strong>Interface utilisateur conviviale :</strong> Interface intuitive et facile à utiliser pour tous les utilisateurs.
+       </li>
+      </ul>
+     </section>
 </section>
+<!-- GitHub Section -->
+<section class="bg-white rounded-lg shadow-lg p-4 mb-4 fade-in" id="github">
+   <h3 class="text-2xl font-bold mt-4 text-green-700">Dépôt GitHub</h3>
+   <p class="mt-2 text-gray-700">Retrouvez tous les fichiers et le code source du projet sur notre dépôt GitHub :</p>
+   <div class="mt-4">
+    <a class="text-white bg-green-700 px-4 py-2 rounded shadow hover:bg-green-600 transition duration-300" 
+       href="https://github.com/aymen12-9/smartplant" 
+       target="_blank">
+     <i class="fab fa-github"></i> Voir le projet sur GitHub
+    </a>
+   </div>
+  </section>
 <section class="bg-white rounded-lg shadow-lg p-4 mb-4 fade-in" id="thanks">
  <h3 class="text-2xl font-bold mt-4 text-green-700">
   Remerciements
@@ -168,109 +302,76 @@
   </p>
  </div>
 </section>
-<!-- GitHub Section -->
-<section class="bg-white rounded-lg shadow-lg p-4 mb-4 fade-in" id="github">
-   <h3 class="text-2xl font-bold mt-4 text-green-700">Dépôt GitHub</h3>
-   <p class="mt-2 text-gray-700">Retrouvez tous les fichiers et le code source du projet sur notre dépôt GitHub :</p>
-   <div class="mt-4">
-    <a class="text-white bg-green-700 px-4 py-2 rounded shadow hover:bg-green-600 transition duration-300" 
-       href="https://github.com/fares97203/smart-plant" 
-       target="_blank">
-     <i class="fab fa-github"></i> Voir le projet sur GitHub
-    </a>
-   </div>
-  </section>
+
 </section>
-   <!-- Contact Section -->
-   <section class="bg-white rounded-lg shadow-lg p-4 mb-4 fade-in" id="contact">
-    <h3 class="text-2xl font-bold mt-4 text-green-700">Contact</h3>
-    <p class="mt-2 text-gray-700">Pour toute question, contactez-nous :</p>
-    <div class="mt-4">
-     <div class="flex items-center space-x-4">
-      <i class="fas fa-envelope text-green-700 text-2xl"></i>
-      <div>
-       <h4 class="text-xl font-semibold">Email</h4>
-       <p class="text-gray-600"><a class="text-green-600" href="mailto:aymenmansouri8171@gmail.com">aymenmansouri8171@gmail.com</a></p>
-      </div>
+ <!-- Contact Section -->
+<section class="bg-white rounded-lg shadow-lg p-6 mb-6 fade-in" id="contact">
+   <h3 class="text-2xl font-bold mt-4 text-green-700">Contact</h3>
+   <p class="mt-2 text-gray-700">Pour toute question, contactez-nous :</p>
+   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+     <!-- Contact 1 -->
+     <div class="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg shadow-md">
+       <i class="fas fa-envelope text-green-700 text-3xl"></i>
+       <div>
+         <h4 class="text-xl font-semibold">Aymen Mansouri</h4>
+         <p class="text-gray-600">
+           <a class="text-green-600 hover:underline" href="mailto:aymenmansouri8171@gmail.com">aymenmansouri8171@gmail.com</a>
+         </p>
+       </div>
      </div>
-    </div>
-    <div class="mt-4">
-        <div class="flex items-center space-x-4">
-         <i class="fas fa-envelope text-green-700 text-2xl">
-         </i>
-         <div>
-          <h4 class="text-xl font-semibold">
-           Email
-          </h4>
-          <p class="text-gray-600">
-           <a class="text-green-600" href="dhifalllah17.aysser@gmail.com">
-            dhifalllah17.aysser@gmail.com
-           </a>
-          </p>
-         </div>
-        </div>
-        <div class="mt-4">
-            <div class="flex items-center space-x-4">
-             <i class="fas fa-envelope text-green-700 text-2xl">
-             </i>
-             <div>
-              <h4 class="text-xl font-semibold">
-               Email
-              </h4>
-              <p class="text-gray-600">
-               <a class="text-green-600" href="fares.hamza97203@gmail.com">
-                fares.hamza97203@gmail.com
-               </a>
-              </p>
-             </div>
-            </div>
-            <div class="mt-4">
-               <div class="flex items-center space-x-4">
-                <i class="fas fa-envelope text-green-700 text-2xl">
-                </i>
-                <div>
-                 <h4 class="text-xl font-semibold">
-                  Email
-                 </h4>
-                 <p class="text-gray-600">
-                  <a class="text-green-600" href="oumaimamaksoudi@gmail.com">
-                     oumaimamaksoudi@gmail.com
-                  </a>
-                 </p>
-                </div>
-               </div>
-               <div class="mt-4">
-                  <div class="flex items-center space-x-4">
-                   <i class="fas fa-envelope text-green-700 text-2xl">
-                   </i>
-                   <div>
-                    <h4 class="text-xl font-semibold">
-                     Email
-                    </h4>
-                    <p class="text-gray-600">
-                     <a class="text-green-600" href="rhoumaayoub12@gmail.com">
-                        rhoumaayoub12@gmail.com
-                     </a>
-                    </p>
-                   </div>
-                  </div>
-                  <div class="mt-4">
-                     <div class="flex items-center space-x-4">
-                      <i class="fas fa-envelope text-green-700 text-2xl">
-                      </i>
-                      <div>
-                       <h4 class="text-xl font-semibold">
-                        Email
-                       </h4>
-                       <p class="text-gray-600">
-                        <a class="text-green-600" href="rahalibasselbelhssan@gmail.com">
-                           rahalibasselbelhssan@gmail.com
-                        </a>
-                       </p>
-                      </div>
-                     </div>
-   
-   </section>
+     <!-- Contact 2 -->
+     <div class="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg shadow-md">
+       <i class="fas fa-envelope text-green-700 text-3xl"></i>
+       <div>
+         <h4 class="text-xl font-semibold">Aysser Dhifallah</h4>
+         <p class="text-gray-600">
+           <a class="text-green-600 hover:underline" href="mailto:dhifalllah17.aysser@gmail.com">dhifalllah17.aysser@gmail.com</a>
+         </p>
+       </div>
+     </div>
+     <!-- Contact 3 -->
+     <div class="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg shadow-md">
+       <i class="fas fa-envelope text-green-700 text-3xl"></i>
+       <div>
+         <h4 class="text-xl font-semibold">Hamza Fares</h4>
+         <p class="text-gray-600">
+           <a class="text-green-600 hover:underline" href="mailto:fares.hamza97203@gmail.com">fares.hamza97203@gmail.com</a>
+         </p>
+       </div>
+     </div>
+     <!-- Contact 4 -->
+     <div class="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg shadow-md">
+       <i class="fas fa-envelope text-green-700 text-3xl"></i>
+       <div>
+         <h4 class="text-xl font-semibold">Ayoub Rhouma</h4>
+         <p class="text-gray-600">
+           <a class="text-green-600 hover:underline" href="mailto:rhoumaayoub12@gmail.com">rhoumaayoub12@gmail.com</a>
+         </p>
+       </div>
+     </div>
+     <!-- Contact 5 -->
+     <div class="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg shadow-md">
+       <i class="fas fa-envelope text-green-700 text-3xl"></i>
+       <div>
+         <h4 class="text-xl font-semibold">Bassel Rahali</h4>
+         <p class="text-gray-600">
+           <a class="text-green-600 hover:underline" href="mailto:rahalibasselbelhssan@gmail.com">rahalibasselbelhssan@gmail.com</a>
+         </p>
+       </div>
+     </div>
+     <!-- Contact 6 -->
+     <div class="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg shadow-md">
+       <i class="fas fa-envelope text-green-700 text-3xl"></i>
+       <div>
+         <h4 class="text-xl font-semibold">Oumaima Maksoudi</h4>
+         <p class="text-gray-600">
+           <a class="text-green-600 hover:underline" href="mailto:oumaimamaksoudi@gmail.com">oumaimamaksoudi@gmail.com</a>
+         </p>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
   </div>
   <footer class="bg-gray-900 text-white text-center py-4">
    <p>© 2024 Surveillance Intelligente des Plantes. Tous droits réservés.</p>
